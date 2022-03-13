@@ -1,2 +1,2 @@
-# lost-ark_calculator
-Simple currency calculator for Lost Ark
+# Lost Ark Currency Calculator
+Simple currency calculator for the Lost Ark game
