@@ -20,15 +20,23 @@ document.getElementById("btn").addEventListener("click", (event) => {
   // calculate actual gold price of bc value
   let price = oneBcPrice(gold) * bc;
 
-  let conclusion = `You pay ${price.toFixed(1)} Gold for ${bc} Blue Crystals.`
+  let conclusion = `You pay ${price.toFixed(1)} Gold for ${bc} Blue Crystals.`;
 
-  document.getElementById("answer").innerHTML = conclusion;
-
-
+  // get <p>'s by ID
   const recom = document.getElementById("worth")
+  const answer = document.getElementById("answer");
+
+  answer.innerHTML = conclusion;
 
   // check conditionals => which one is cheaper?
-  if (auction < price) {
+
+  if (auction <= 0 || price <= 0) {
+    let worth = `Please enter a valid value.`
+    recom.innerHTML = worth;
+    answer.innerHTML = "";
+  }
+
+  else if (auction < price) {
 
     let worth = `Buy it with gold`
     recom.innerHTML = worth;

@@ -2,8 +2,6 @@
 
 html {
   font-family: audiowide;
-  /* display: flex; */
-
 }
 
 body {
@@ -11,7 +9,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 13rem;
+  margin-top: 2rem;
 }
 
 h1 {
@@ -20,7 +18,10 @@ h1 {
   text-shadow: 1px 1px #525252;
 }
 
+/*! START - <fieldset> */
+
 fieldset {
+  transition: 1s ease-out;
   background-color: #cdcdcd;
   display: flex;
   flex-direction: column;
@@ -28,24 +29,32 @@ fieldset {
   padding: 2rem;
   border: 1px solid #cdcdcd;
   border-radius: 12px;
-  box-shadow: 6px 6px #525252;
-
+  box-shadow: 5px 5px 0.1px #525252;
 }
 
 
 fieldset > * {
+  transition: 0.6s;
+  outline: none;
   padding: .5rem;
   border-radius: 12px;
 }
 
+/*! START - <label> */
+
 fieldset > label {
   margin-top: 2rem;
-  border-top: 1px solid #1a1a1a;
+  border-top: 2.5px solid #1a1a1a;
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
   text-shadow: 1px 1px #1a1a1a;
   text-decoration: underline;
+}
+
+fieldset > input:focus {
+  transition: 0.6s  ;
+  box-shadow: 2px 2px #1a1a1a;
 }
 
 [for="gold"] {
@@ -58,28 +67,59 @@ fieldset > label {
   text-decoration-color: #5059C6;
 }
 
-[for="auction"] {
-  text-shadow: 1px 1px #a1a1a1;
+::placeholder {
+  font-family: audiowide;
+  opacity: 0.5;
 }
+
+/*! START - <input> */
 
 fieldset > input {
   text-align: center;
   border: 1px solid #cdcdcd;
+}
+
+fieldset > input:hover {
+  transition: 0.6s;
   box-shadow: 2px 2px #1a1a1a;
 }
 
+#auction {
+  border-bottom: 1px solid #1a1a1a;
+}
+
+path {
+  margin-top: 2rem;
+  border-bottom: 0.5px solid #1a1a1a;
+  border-radius: 0;
+}
+
+/*! START - button */
+
 #btn {
-  margin-top: 2.5rem;
-  font-size: 1.2rem;
+  margin-top: 3rem;
+  font-size: 1.5rem;
   font-family: audiowide;
-  border: none;
+  border: 1px solid #1a1a1a;
+  border-radius: 20px 20px 4px 4px;
+}
+
+#btn:hover {
+  transition: 0.8s;
+  box-shadow: 2px 2px #1a1a1a;
+}
+
+#btn:focus {
+  transition: 0.8s;
   box-shadow: 2px 2px #1a1a1a;
 }
 
 #answer {
+  font-size: 2rem;
   color: #cdcdcd;
 }
 
 #worth {
+  font-size: 2rem;
   color: #cdcdcd;
 }
