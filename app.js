@@ -20,7 +20,7 @@ document.getElementById("btn").addEventListener("click", (event) => {
   // calculate actual gold price of bc value
   let price = oneBcPrice(gold) * bc;
 
-  let conclusion = `You pay ${price.toFixed(1)} Gold for ${bc} Blue Crystals.`;
+  let conclusion = `You pay <span class="gold">${price.toFixed(1)} Gold</span> for <span class="crystals">${bc} Blue Crystals.`;
 
   // get <p>'s by ID
   const recom = document.getElementById("worth")
@@ -31,6 +31,7 @@ document.getElementById("btn").addEventListener("click", (event) => {
   // check conditionals => which one is cheaper?
 
   if (auction <= 0 || price <= 0) {
+
     let worth = `Please enter a valid value.`
     recom.innerHTML = worth;
     answer.innerHTML = "";
@@ -38,7 +39,7 @@ document.getElementById("btn").addEventListener("click", (event) => {
 
   else if (auction < price) {
 
-    let worth = `Buy it with gold`
+    let worth = `<span class="gold">Buy it with gold.</span>`
     recom.innerHTML = worth;
   }
 
@@ -50,10 +51,9 @@ document.getElementById("btn").addEventListener("click", (event) => {
 
   else {
 
-    let worth = `Buy it with Blue Crystals.`
+    let worth = `<span class="crystals">Buy it with Blue Crystals.</span>`
     recom.innerHTML = worth;
   }
-
 
 });
 
