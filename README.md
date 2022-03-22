@@ -2,7 +2,6 @@
 ## What does it do?
 It calculates for you whether an item is worth to be purchased in the ***Auction House*** or in ***Marie's Shop*** by exchanging <ins>**Gold**</ins> (💰) into <ins>**Blue Crystals**</ins> (💎).
 
----
 ## How to use it
 ### 1.) <ins>Enter the relevant values for the calculation</ins>
 * 💰 <ins>**Gold Value**</ins>
